@@ -9,3 +9,9 @@ The Problem: With the default Blender -> Gltf -> Godot pipeline, the Gltf for ea
 The Solution: At export time, this Blender plugin replaces linked .blend meshes with empty placeholder nodes with just the transform and name of the prop. On Godot's side, an import script can then replace them with the instances of the proper props.
 
 Usage: Install the plugin, then export to Gltf with File -> Export -> Godot Level (.gltf)
+
+Install for development use:
+```
+cd ~/.config/blender/4.4/scripts/addons
+ln -s /path/to/blender-to-godot-export/src blender-to-godot-export
+```
