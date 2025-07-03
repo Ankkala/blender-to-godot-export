@@ -10,6 +10,8 @@ The Solution: At export time, this Blender plugin replaces linked .blend meshes 
 
 Usage: Install the plugin, then export to Gltf with File -> Export -> Godot Level (.gltf)
 
+Then add an import script for Gltf files in Godot. You may use [our script](contrib/gltf_import.gd) for reference. (Note that our import script also sets animations to autoplay on loop.)
+
 Install for development use:
 ```
 cd ~/.config/blender/4.4/scripts/addons
