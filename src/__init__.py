@@ -129,11 +129,15 @@ class EXPORT_OT_level_gltf(bpy.types.Operator):
                 bpy.ops.export_scene.gltf(
                     filepath=self.filepath,
                     export_format='GLTF_SEPARATE',  # separate .gltf + .bin files
-                    export_extras=True,           # write our custom property
-                    use_selection=False,          # export entire scene
-                    export_apply=False,
+                    export_extras=True,             # write custom properties
+                    use_selection=False,            # export entire scene
+                    export_attributes=True,         # Mesh → Attributes
+                    export_apply=True,              # Mesh → Apply Modifiers
                     export_yup=True,
-                    export_keep_originals=True,   # don't copy textures, keep original files
+                    export_keep_originals=True,     # don't copy textures, keep original files
+                    export_vertex_color='ACTIVE',
+                    export_all_vertex_colors=True,
+                    export_active_vertex_color_when_no_material=True,                    
                 )
 
                 print("glTF export completed")
