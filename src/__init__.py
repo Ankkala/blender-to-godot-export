@@ -137,7 +137,10 @@ class EXPORT_OT_level_gltf(bpy.types.Operator):
                     export_keep_originals=True,     # don't copy textures, keep original files
                     export_vertex_color='ACTIVE',
                     export_all_vertex_colors=True,
-                    export_active_vertex_color_when_no_material=True,                    
+                    export_active_vertex_color_when_no_material=True,
+                    export_animations=True,
+                    export_animation_mode='ACTIONS',        # “Animation Mode: Actions”
+                    export_merge_animation='NLA_TRACK',     # “Merge Animation: NLA Track Names”
                 )
 
                 print("glTF export completed")
